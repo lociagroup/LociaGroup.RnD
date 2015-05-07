@@ -37,5 +37,13 @@ RabbitMQ data accross the object server and the HMIV clients.
 each HMIV can read off the buffer or broadcast on the buffer. 
 
 
+Rabbit MW needs a broker that will handle the message queue. The broker needs to be on the same network. The broker can be set to be a local host. 
+
+If the broker is set to be local at each Object server then there could be a distributed network of brokers. A routing table can be used to point each broker/Object server to any HMI's or IO servers. The routing configuration can be stored on each servers local bootstrap service. 
 
 
+
+The scada system could be simplified so that the system only has a single server with node handlers , and three layered datastructure. 
+
+a single server that acts as the broadcaster and the queuing server.
+if all the clients wich are also visualizaiton nodes grab data and pump it to the broker 
