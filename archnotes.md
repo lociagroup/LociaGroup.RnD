@@ -286,6 +286,26 @@ The historian information needs to be setup with the proper credentials through 
 The name of the historian database in the SQl server is called A2ALMDB.
 
 
+Backup Server/ Redundant Server
+--
+
+Network binding order must be set. The ap address of te promary server should be known. The secondary network card on the system must have a different subnet mask in comparison to the first. Heart beat errors occur when the network binding is not set correctly.
+
+Backups are only in pair of redundant partners .
+
+Redundandancy Configuration
+1. Install 2nd network card
+2. configure the archestra connection to be accessed before the RMC connection. 
+3. give the RMC aconnection a fixed IP address in a different subnet than the archestra connection. 
+
+Application Server
+1. Configure the winplatforms with thier corresponding local rmc ip addresses.
+2. Configure the appengine to be redundant.
+3. Assign the appengines prinary and backup to the winplatforms.
+
+
+
+
 Security Model
 ---
 Access levels are given to every user . The value can be used to modify the graphics. With galaxy authentication mode an be set to one of the following
@@ -301,3 +321,7 @@ security Geroups : Groupings of instances inside the galaxy, a way to seperate o
 All objects have a ScanState command. It can be used for security.
 
 Track all events of each user. can be viewed by the sql database.
+
+
+Graphics 
+---

@@ -47,3 +47,6 @@ The scada system could be simplified so that the system only has a single server
 
 a single server that acts as the broadcaster and the queuing server.
 if all the clients wich are also visualizaiton nodes grab data and pump it to the broker 
+
+A simple scada system would look like
+an input and output for each node instance. 
